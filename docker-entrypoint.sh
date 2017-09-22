@@ -7,7 +7,7 @@ export KONG_NGINX_DAEMON="off"
 # Setting default prefix (override any existing variable)
 export KONG_PREFIX="/usr/local/kong"
 
-kong migrations up 
+kong migrations up -c /usr/local/kong/nginx.conf 
 
 kong reload
 
