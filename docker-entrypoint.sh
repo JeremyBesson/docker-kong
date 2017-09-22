@@ -12,4 +12,8 @@ if [ "$1" = "/usr/local/openresty/nginx/sbin/nginx" ]; then
 	kong prepare -p "/usr/local/kong"
 fi
 
+kong migrations up 
+
+kong reload
+
 exec "$@"
