@@ -7,7 +7,7 @@ export KONG_NGINX_DAEMON="off"
 # Setting default prefix (override any existing variable)
 export KONG_PREFIX="/usr/local/kong"
 
-#if ["psql -h kong-database -U kong -d kong -c \"SELECT 1\"" ]; then
+#if ["psql -h kong-database -U postgres -d kong -c "SELECT 1"" ]; then
 #
 #    kong migrations up #-c /usr/local/kong/nginx.conf 
 #
