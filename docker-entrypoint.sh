@@ -9,9 +9,9 @@ export KONG_PREFIX="/usr/local/kong"
 
 #if ["psql -h kong-database -U kong -d kong -c \"SELECT 1\"" ]; then
 #
-#    kong migrations up #-c /usr/local/kong/nginx.conf 
+    kong migrations up #-c /usr/local/kong/nginx.conf 
 #
-#    kong reload
+    kong reload
 #
 #fi
 
