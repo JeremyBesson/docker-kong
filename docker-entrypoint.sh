@@ -12,6 +12,7 @@ echo "1" > /fixkong
 if [ "$FIXKONG" == "" ]; then
    kong migrations up
    kong reload
+   exit 0
 fi 
 
 echo $?
