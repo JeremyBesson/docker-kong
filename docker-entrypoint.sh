@@ -9,7 +9,7 @@ echo "toto :"
 echo $FIXKONG
 echo "1" > /fixkong
 
-if [ "$FIXKONG" == "" ]; then
+if [ "$FIXKONG" != "1" ]; then
    kong migrations up
    kong reload
    exit 0
