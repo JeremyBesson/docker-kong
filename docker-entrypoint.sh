@@ -4,11 +4,11 @@ set -e
 # Disabling nginx daemon mode
 export KONG_NGINX_DAEMON="off"
 
-kong migrations up 2&>/dev/null
+#kong migrations up 2&>/dev/null
 
 echo $?
 
-kong reload 2&>/dev/null
+#kong reload 2&>/dev/null
 
 echo $?
 
