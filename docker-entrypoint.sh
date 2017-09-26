@@ -5,6 +5,8 @@ set -e
 export KONG_NGINX_DAEMON="off"
 
 FIXKONG=$(cat /fixkong)
+echo "toto :"
+echo $FIXKONG
 echo "1" > /fixkong
 
 if [ "$FIXKONG" == "" ]; then
