@@ -4,11 +4,13 @@ set -e
 # Disabling nginx daemon mode
 export KONG_NGINX_DAEMON="off"
 
-#kong migrations up 2&>/dev/null
+FIXKONG=$(cat /fixkong)
+echo "1" > /fixkong
 
-echo $?
-
-#kong reload 2&>/dev/null
+if [ "$FIXKONG" == "" ]; then
+   kong migrations up
+   kong reload
+fi 
 
 echo $?
 
